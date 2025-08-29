@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ghostbusters | Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* font format */
+            background-color: #f0f8ff; /* bg colour */
+            color: #333; /* colour */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            padding: 25px;
+            margin: 20px;
+            background-color: #ffffff;
+        }
+        
+        /* Gaya untuk navigasi */
+        .navigasi a {
+            padding: 10px 15px;
+            margin: 0 5px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none; /* Menghilangkan garis bawah link */
+            font-size: 16px;
+        }
+        
+        .navigasi {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #0056b3;
+            text-align: center; /* font align */
+        }
+        
+        /* Judul nama anggota yang bisa diklik */
+        .nama-anggota {
+            font-size: 24px; /* font size */
+            color: #007bff;
+            cursor: pointer; /* Mengubah kursor menjadi tangan saat di atas nama */
+        }
+        
+        /* Styling untuk biodata yang awalnya disembunyikan */
+        .biodata {
+            display: none; /* Awalnya biodata disembunyikan */
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+        }
+    </style>
+    
+    <script>
+        function tampilkanBiodata(id) {
+            // Mengambil elemen biodata berdasarkan ID
+            var elemen = document.getElementById(id);
+            
+            // Cek apakah biodata sedang ditampilkan atau tidak
+            if (elemen.style.display === "block") {
+                // Jika ya, sembunyikan
+                elemen.style.display = "none";
+            } else {
+                // Jika tidak, tampilkan
+                elemen.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ceritanya w3schools</h1>
+
+        <div class="navigasi">
+            <a href="index.html">Homepage</a>
+            <a href="tabel.html">Halaman Tabel</a>
+            <a href="elemen.html">Halaman Elemen</a>
+        </div>
+
+        <hr>
+
+        <h2 class="nama-anggota" onclick="tampilkanBiodata('biodata1')">Headmaster | Hackintosh specialist</h2>
+        <div id="biodata1" class="biodata">
+            <p><strong>Nama:</strong>Ardan Fachrial Ramdani M.Kom M.H S.Psi</p>
+            <p><strong>Lahir:</strong> Jakarta, 4 Oktober 2008</p>
+            <p><strong>Jurusan:</strong> Teknik Informatika</p>
+            <p><strong>Hobi:</strong> Bongkar Pasang barang</p>
+        </div>
+
+        <h2 class="nama-anggota" onclick="tampilkanBiodata('biodata2')">Web specialist | Ui/UX</h2>
+        <div id="biodata2" class="biodata">
+            <p><strong>Nama:</strong> Surya Kencana S.Kom</p>
+            <p><strong>Lahir:</strong> Jakarta, 12 Mei 2008</p>
+            <p><strong>Jurusan:</strong> Sistem Informasi</p>
+            <p><strong>Hobi:</strong> Desain grafis</p>
+        </div>
+
+        <h2 class="nama-anggota" onclick="tampilkanBiodata('biodata3')">Post Prod | Video Editing</h2>
+        <div id="biodata3" class="biodata">
+            <p><strong>Nama:</strong> Khaulah Azzahwah</p>
+            <p><strong>Lahir:</strong> Jakarta, 16 September 2008</p>
+            <p><strong>Jurusan:</strong> Teknik Komputer</p>
+            <p><strong>Hobi:</strong> Bermain congklak</p>
+        </div>
+    </div>
+
+</body>
+</html>

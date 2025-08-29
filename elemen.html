@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Elemen HTML</title>
+    <style>
+        body {
+            font-family: Georgia, serif; /* font format */
+            background-color: #f4f4f9; /* bg colour */
+            color: #333;
+        }
+
+        /* DIV sebagai pembungkus utama dengan style */
+        .wrapper {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+        }
+        
+        /* Gaya untuk navigasi */
+        .navigasi a {
+            padding: 10px 15px;
+            margin: 0 5px;
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .navigasi {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #b22222; /* colour */
+            text-align: center; /* font align */
+        }
+        
+        /* DIV sebagai section box */
+        .section-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fafafa;
+            border: 1px solid #ddd;
+        }
+        
+        h2 {
+            font-size: 20px; /* font size */
+            color: #343a40;
+        }
+        
+        /* SPAN untuk memberi style pada teks inline */
+        .highlight {
+            background-color: #ffc107; /* bg colour */
+            color: #333; /* colour */
+            padding: 2px 5px; /* padding */
+        }
+        
+        img, video {
+            max-width: 100%; /* biar gambar dan video responsif */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Demonstrasi Elemen HTML</h1>
+        
+        <div class="navigasi">
+            <a href="index.html">Homepage</a>
+            <a href="tabel.html">Halaman Tabel</a>
+            <a href="elemen.html">Halaman Elemen</a>
+        </div>
+        
+        <hr>
+
+        <div class="section-box">
+            <h2>Contoh Penggunaan div dan span</h2>
+            <p>Tag `div` digunakan untuk mengelompokkan elemen-elemen ini dalam satu kotak. Sedangkan tag <span class="highlight">`span` digunakan untuk menyorot</span> bagian tertentu dari teks tanpa membuat baris baru.</p>
+        </div>
+
+        <div class="section-box">
+            <h2>Contoh List</h2>
+            <h3>Ordered List (ol) - Urutan Penting:</h3>
+            <ol>
+                <li>Langkah pertama</li>
+                <li>Langkah kedua</li>
+                <li>Langkah ketiga</li>
+            </ol>
+            
+            <h3>Unordered List (ul) - Urutan Tidak Penting:</h3>
+            <ul>
+                <li>Apel</li>
+                <li>Jeruk</li>
+                <li>Mangga</li>
+            </ul>
+        </div>
+        
+        <div class="section-box">
+            <h2>Contoh Select (Dropdown)</h2>
+            <label for="kota">Pilih Kota:</label>
+            <select name="kota" id="kota">
+                <option value="jakarta">Jakarta</option>
+                <option value="bandung">Bandung</option>
+                <option value="surabaya">Surabaya</option>
+                <option value="medan">Medan (pemakan besi)</option>
+            </select>
+        </div>
+
+        <div class="section-box">
+            <h2>Contoh Media (Gambar, Audio, Video)</h2>
+            <h3>Gambar:</h3>
+            <img src="/Users/dreamkeisya/coding/studykasus1/elemnt/dsds9.JPG" alt="Contoh Gambar Kucing">
+            
+            <h3>Audio:</h3>
+            <audio controls>
+                <source src="/Users/dreamkeisya/coding/studykasus1/elemnt/Kalimba.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung elemen audio.
+            </audio>
+            
+            <h3>Video:</h3>
+            <video controls width="400">
+                <source src="https://file-examples.com/storage/feed00481a68af85f931c46/2020/03/file_example_WEBM_640_1_4MB.webm" type="video/webm">
+                Browser Anda tidak mendukung elemen video.
+            </video>
+        </div>
+        
+        <div class="section-box">
+            <h2>Contoh Inframe (Menampilkan Konten dari Website Lain)</h2>
+            <iframe width="560" height="315" src="https://youtu.be/EsgxnAIgy4E?si=qbcCpvnH_mkw-Ix3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -4,9 +4,9 @@
     <title>Ghostbusters | Homepage</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* font format */
-            background-color: #f0f8ff; /* bg colour */
-            color: #333; /* colour */
+            font-family: Arial, sans-serif;
+            background-color: #3e8ed5;
+            color: #333;
             margin: 0;
             padding: 20px;
         }
@@ -14,60 +14,55 @@
         .container {
             padding: 25px;
             margin: 20px;
-            background-color: #ffffff;
+            background-color: #e7d7d7;
         }
-        
-        /* Gaya untuk navigasi */
+
         .navigasi a {
             padding: 10px 15px;
             margin: 0 5px;
             background-color: #007bff;
             color: white;
-            text-decoration: none; /* Menghilangkan garis bawah link */
+            text-decoration: none;
             font-size: 16px;
         }
-        
+
         .navigasi {
             margin-bottom: 20px;
         }
 
         h1 {
             color: #0056b3;
-            text-align: center; /* font align */
+            text-align: center;
+        }
+
+        /* Hide the checkbox */
+        .toggle-checkbox {
+            display: none;
         }
         
-        /* Judul nama anggota yang bisa diklik */
+        /* Style the clickable labels */
         .nama-anggota {
-            font-size: 24px; /* font size */
+            font-size: 24px;
             color: #007bff;
-            cursor: pointer; /* Mengubah kursor menjadi tangan saat di atas nama */
+            cursor: pointer;
+            display: block; /* Make the label a block-level element */
+            margin-bottom: 10px;
         }
-        
-        /* Styling untuk biodata yang awalnya disembunyikan */
+
+        /* Styling for the hidden biodata */
         .biodata {
-            display: none; /* Awalnya biodata disembunyikan */
+            display: none; /* Initially hide the biodata */
             padding: 15px;
             margin-top: 10px;
             background-color: #e9ecef;
             border-left: 5px solid #007bff;
         }
-    </style>
-    
-    <script>
-        function tampilkanBiodata(id) {
-            // Mengambil elemen biodata berdasarkan ID
-            var elemen = document.getElementById(id);
-            
-            // Cek apakah biodata sedang ditampilkan atau tidak
-            if (elemen.style.display === "block") {
-                // Jika ya, sembunyikan
-                elemen.style.display = "none";
-            } else {
-                // Jika tidak, tampilkan
-                elemen.style.display = "block";
-            }
+
+        /* Show the biodata when the corresponding checkbox is checked */
+        .toggle-checkbox:checked + .biodata {
+            display: block;
         }
-    </script>
+    </style>
 </head>
 <body>
 
@@ -82,15 +77,17 @@
 
         <hr>
 
-        <h2 class="nama-anggota" onclick="tampilkanBiodata('biodata1')">Headmaster | Hackintosh specialist</h2>
+        <label for="toggle-ardan" class="nama-anggota">Headmaster | Hackintosh specialist</label>
+        <input type="checkbox" id="toggle-ardan" class="toggle-checkbox">
         <div id="biodata1" class="biodata">
-            <p><strong>Nama:</strong>Ardan Fachrial Ramdani M.Kom M.H S.Psi</p>
+            <p><strong>Nama:</strong> Ardan Fachrial Ramdani M.Kom M.H S.Psi</p>
             <p><strong>Lahir:</strong> Jakarta, 4 Oktober 2008</p>
             <p><strong>Jurusan:</strong> Teknik Informatika</p>
             <p><strong>Hobi:</strong> Bongkar Pasang barang</p>
         </div>
 
-        <h2 class="nama-anggota" onclick="tampilkanBiodata('biodata2')">Web specialist | Ui/UX</h2>
+        <label for="toggle-surya" class="nama-anggota">Web specialist | Ui/UX</label>
+        <input type="checkbox" id="toggle-surya" class="toggle-checkbox">
         <div id="biodata2" class="biodata">
             <p><strong>Nama:</strong> Surya Kencana S.Kom</p>
             <p><strong>Lahir:</strong> Jakarta, 12 Mei 2008</p>
@@ -98,7 +95,8 @@
             <p><strong>Hobi:</strong> Desain grafis</p>
         </div>
 
-        <h2 class="nama-anggota" onclick="tampilkanBiodata('biodata3')">Post Prod | Video Editing</h2>
+        <label for="toggle-khaulah" class="nama-anggota">Post Prod | Video Editing</label>
+        <input type="checkbox" id="toggle-khaulah" class="toggle-checkbox">
         <div id="biodata3" class="biodata">
             <p><strong>Nama:</strong> Khaulah Azzahwah</p>
             <p><strong>Lahir:</strong> Jakarta, 16 September 2008</p>

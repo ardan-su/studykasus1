@@ -1,71 +1,71 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> <html>
 <head>
-    <title>Ghostbusters | Homepage</title>
-    <style>
+    <title>Ghostbusters | Homepage</title> <style>
+        /* Mengatur gaya untuk seluruh elemen <body> (seluruh halaman web) */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #3e8ed5;
-            color: #333;
-            margin: 0;
-            padding: 20px;
+            font-family: Arial, sans-serif; /* Mengatur jenis font */
+            background-color: #3e8ed5;      /* Mengatur warna latar belakang halaman */
+            color: #333;                    /* Mengatur warna teks default */
+            margin: 0;                      /* Menghapus margin default dari body */
+            padding: 20px;                  /* Memberi jarak di sekeliling konten body */
         }
 
+        /* Mengatur gaya untuk elemen dengan class "container" */
         .container {
-            padding: 25px;
-            margin: 20px;
-            background-color: #e7d7d7;
+            padding: 25px;                  /* Memberi jarak di dalam container */
+            margin: 20px;                   /* Memberi jarak di luar container */
+            background-color: #e7d7d7;      /* Mengatur warna latar belakang container */
         }
 
+        /* Mengatur gaya untuk link (tag <a>) di dalam class "navigasi" */
         .navigasi a {
-            padding: 10px 15px;
-            margin: 0 5px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
+            padding: 10px 15px;             /* Memberi jarak di dalam tombol link */
+            margin: 0 5px;                  /* Memberi jarak antar tombol link */
+            background-color: #007bff;      /* Warna latar tombol */
+            color: white;                   /* Warna teks tombol */
+            text-decoration: none;          /* Menghapus garis bawah pada link */
+            font-size: 16px;                /* Ukuran font teks tombol */
         }
 
+        /* Mengatur gaya untuk elemen dengan class "navigasi" */
         .navigasi {
-            margin-bottom: 20px;
+            margin-bottom: 20px;            /* Memberi jarak di bawah grup navigasi */
         }
 
+        /* Mengatur gaya untuk judul utama (tag <h1>) */
         h1 {
-            color: #0056b3;
-            text-align: center;
+            color: #0056b3;                 /* Warna teks judul */
+            text-align: center;             /* Posisi teks judul di tengah */
         }
 
-        /* Hide the checkbox */
-        .toggle-checkbox {
+        /* Mengatur gaya untuk elemen <summary> dengan class "nama-anggota" */
+        summary.nama-anggota {
+            font-size: 24px;                /* Ukuran font judul biodata */
+            color: #007bff;                 /* Warna teks judul biodata */
+            cursor: pointer;                /* Mengubah kursor menjadi tangan saat diarahkan */
+            display: block;                 /* Membuat elemen memenuhi lebar container */
+            margin-bottom: 10px;            /* Memberi jarak di bawah setiap judul */
+        }
+
+        /* Menghilangkan penanda panah default dari elemen <summary> di browser Chrome/Safari */
+        summary.nama-anggota::-webkit-details-marker {
             display: none;
         }
-        
-        /* Style the clickable labels */
-        .nama-anggota {
-            font-size: 24px;
-            color: #007bff;
-            cursor: pointer;
-            display: block; /* Make the label a block-level element */
-            margin-bottom: 10px;
+        /* Menghilangkan penanda panah default dari elemen <summary> di browser modern lainnya */
+        summary.nama-anggota::marker {
+            display: none;
         }
 
-        /* Styling for the hidden biodata */
+        /* Mengatur gaya untuk elemen dengan class "biodata" */
         .biodata {
-            display: none; /* Initially hide the biodata */
-            padding: 15px;
-            margin-top: 10px;
-            background-color: #e9ecef;
-            border-left: 5px solid #007bff;
-        }
-
-        /* Show the biodata when the corresponding checkbox is checked */
-        .toggle-checkbox:checked + .biodata {
-            display: block;
+            padding: 15px;                  /* Memberi jarak di dalam kotak biodata */
+            margin-top: 10px;               /* Memberi jarak di atas kotak biodata */
+            background-color: #e9ecef;      /* Warna latar kotak biodata */
+            border-left: 5px solid #007bff; /* Memberi garis tebal di sisi kiri */
         }
     </style>
 </head>
 <body>
-    <!-- ini buat tombol navigasi -->
     <div class="container">
         <h1>Ceritanya w3schools</h1>
 
@@ -75,35 +75,35 @@
             <a href="elemen.html">Halaman Elemen</a>
         </div>
 
-        <hr>
+        <hr> <details>
+            <summary class="nama-anggota">Headmaster | Hackintosh specialist</summary>
+            <div class="biodata">
+                <p><strong>Nama:</strong> Ardan Fachrial Ramdani M.Kom M.H S.Psi</p>
+                <p><strong>Lahir:</strong> Jakarta, 4 Oktober 2008</p>
+                <p><strong>Jurusan:</strong> Teknik Informatika</p>
+                <p><strong>Hobi:</strong> Bongkar Pasang barang</p>
+            </div>
+        </details>
 
-        <label for="toggle-ardan" class="nama-anggota">Headmaster | Hackintosh specialist</label>
-        <input type="checkbox" id="toggle-ardan" class="toggle-checkbox"> <!-- Checkbox untuk menampilkan biodata -->
-        <div id="biodata1" class="biodata">
-            <p><strong>Nama:</strong> Ardan Fachrial Ramdani M.Kom M.H S.Psi</p>
-            <p><strong>Lahir:</strong> Jakarta, 4 Oktober 2008</p>
-            <p><strong>Jurusan:</strong> Teknik Informatika</p>
-            <p><strong>Hobi:</strong> Bongkar Pasang barang</p>
-        </div>
+        <details>
+            <summary class="nama-anggota">Web specialist | Ui/UX</summary>
+            <div class="biodata">
+                <p><strong>Nama:</strong> Surya Kencana S.Kom</p>
+                <p><strong>Lahir:</strong> Jakarta, 12 Mei 2008</p>
+                <p><strong>Jurusan:</strong> Sistem Informasi</p>
+                <p><strong>Hobi:</strong> Desain grafis</p>
+            </div>
+        </details>
 
-        <label for="toggle-surya" class="nama-anggota">Web specialist | Ui/UX</label>
-        <input type="checkbox" id="toggle-surya" class="toggle-checkbox"> <!-- Checkbox untuk menampilkan biodata -->
-        <div id="biodata2" class="biodata">
-            <p><strong>Nama:</strong> Surya Kencana S.Kom</p>
-            <p><strong>Lahir:</strong> Jakarta, 12 Mei 2008</p>
-            <p><strong>Jurusan:</strong> Sistem Informasi</p>
-            <p><strong>Hobi:</strong> Desain grafis</p>
-        </div>
+        <details>
+            <summary class="nama-anggota">Post Prod | Video Editing</summary>
+            <div class="biodata">
+                <p><strong>Nama:</strong> Khaulah Azzahwah</p>
+                <p><strong>Lahir:</strong> Jakarta, 16 September 2008</p>
+                <p><strong>Jurusan:</strong> Teknik Komputer</p>
+                <p><strong>Hobi:</strong> Bermain congklak</p>
+            </div>
+        </details>
 
-        <label for="toggle-khaulah" class="nama-anggota">Post Prod | Video Editing</label>
-        <input type="checkbox" id="toggle-khaulah" class="toggle-checkbox"> <!-- Menggunakan label toggle dan input Checkbox untuk menampilkan biodata -->
-        <div id="biodata3" class="biodata">
-            <p><strong>Nama:</strong> Khaulah Azzahwah</p>
-            <p><strong>Lahir:</strong> Jakarta, 16 September 2008</p>
-            <p><strong>Jurusan:</strong> Teknik Komputer</p>
-            <p><strong>Hobi:</strong> Bermain congklak</p>
-        </div>
-    </div>
-
-</body>
+    </div> </body>
 </html>
